@@ -11,7 +11,9 @@ function navber() {
             <nav className="flex h-full justify-around items-center relative">
                 <div className="logo flex items-center gap-2">
                     <img className="w-10 rounded-full" src={logo} alt="logo" />
-                    <p className="text-xl">Nowath</p>
+                    <a className="text-xl" href="#Home">
+                        Nowath
+                    </a>
                 </div>
                 <ul className="hidden sm:flex gap-4">
                     <li>
