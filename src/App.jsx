@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/navber";
 import { Routes, Route } from "react-router-dom";
 import Home from "./page/Home.jsx";
@@ -10,12 +10,15 @@ function App() {
     const [card3, setCard3] = useState(false);
     const [card4, setCard4] = useState(false);
 
+    function handleSubmit(e) {
+        e.prova;
+    }
     return (
         <div className="relative bg-gradient-to-r from-sky-500 to-indigo-500 min-h-screen">
             <Home />
             <Navbar />
-            <section className="min-h-[30vh] mt-[3rem] p-10">
-                <div className="cards flex justify-around items-center flex-wrap gap-y-4">
+            <section className="min-h-[30vh] mt-[3rem] p-10 flex justify-center">
+                <div className="cards flex justify-around items-center flex-wrap gap-y-10 gap-x-20 max-w-[1600px] h-auto">
                     <div
                         className={`${
                             card1 ? "bg-red-300 " : "bg-red-600/40 text-white "
