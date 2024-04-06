@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import logo from "../assets/nowathlogo.png";
+import { motion } from "framer-motion";
+import { BiFullscreen } from "react-icons/bi";
 
 function navber() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="sticky top-4 h-[5vh] bg-white/30 border-2 border-white/20 backdrop-blur-xl  rounded-xl z-10">
+        <motion.div
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.8 }}
+            className="sticky top-4 h-[5vh] bg-white/30 border-2 border-white/20 backdrop-blur-xl  rounded-xl z-10"
+        >
             <nav className="flex h-full justify-around items-center relative">
                 <div className="logo flex items-center gap-2">
                     <img className="w-10 rounded-full" src={logo} alt="logo" />
@@ -81,7 +88,7 @@ function navber() {
                     </ul>
                 </div>
             </nav>
-        </div>
+        </motion.div>
     );
 }
 
